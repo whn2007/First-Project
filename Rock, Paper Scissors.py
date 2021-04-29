@@ -1,13 +1,17 @@
+import random
 
-def main():
-    #3a.
-    print([10 ** i for i in range(6)])
-    #3b.
-    print( i*(i+1) for i in range(10))
-    #3c.
-    print([chr(i) for i in range(97,123)])
+def game():
+    player_input = input("Enter (r)ock, (p)aper, or (s)cissors.")
 
+    while player_input not in "rps":
+        player_input = input("Enter (r)ock, (p)aper, or (s)cissors.")
 
-if __name__ == '__main__':
-    main()
+    options = ["r","p","s"]
+    computer_choice = random.choice(options)
 
+    if player_input == "r" and computer_choice == "s":
+        print("You win!")
+        input("Play again? (y)es/(n)o")
+
+print("Ready to play?")
+game()
