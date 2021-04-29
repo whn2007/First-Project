@@ -1,1 +1,1 @@
-# First-Project
+# Simple Rock Paper Scissors game
